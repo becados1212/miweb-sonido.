@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ingeniero de Sonido en Vivo</title>
+  <style>
+    :root{--lime:#ccff00;--bg:#0f0f0f;}
+    *{box-sizing:border-box}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: #e5e5e5;
+    }
+    /* fondo - consola moderna */
+    .hero {
+      position: relative;
+      min-height: 340px;
+      background-image: url('https://images.unsplash.com/photo-1581276879432-15a19d654956?auto=format&fit=crop&w=1600&q=80');
+      background-position: center;
+      background-size: cover;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:60px 20px;
+    }
+    /* capa oscura para legibilidad */
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65));
+    }
+    header{position:relative;z-index:1;color:var(--lime)}
+    header h1{margin:0;font-size:2.6rem}
+    header p{margin-top:12px;font-size:1.05rem;max-width:900px;margin-left:auto;margin-right:auto;line-height:1.5;color:#e6e6e6}
+
+    .container{max-width:1100px;margin:30px auto;padding:0 18px}
+
+    .profile-img{width:200px;height:200px;border-radius:12px;object-fit:cover;display:block;margin:18px auto;box-shadow:0 6px 20px rgba(0,0,0,0.6);border:4px solid rgba(204,255,0,0.12)}
+
+    .section{padding:36px 0}
+    h2{color:var(--lime);font-size:1.8rem;margin-bottom:14px}
+    .intro{background:#161616;border-left:6px solid var(--lime);padding:22px;border-radius:10px;font-size:1.05rem;line-height:1.6}
+
+    .images{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:20px}
+    .images img{width:100%;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+
+    .certs{background:#151515;padding:20px;border-radius:10px;border:1px solid #222;margin-top:20px}
+    .certs ul{margin:0;padding-left:18px}
+
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+    .card{background:#141414;padding:18px;border-radius:10px;border:1px solid #222}
+    .card h3{color:var(--lime);margin-top:0}
+
+    .contact{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+    .btn{background:var(--lime);color:#000;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:700}
+
+    footer{background:#000;color:#888;text-align:center;padding:18px;margin-top:36px;font-size:0.95rem}
+
+    @media (max-width:520px){header h1{font-size:1.9rem}.profile-img{width:150px;height:150px}}
+  </style>
+</head>
+<body>
+  <!-- HERO (fondo consola + título original) -->
+  <section class="hero">
+    <header>
+      <h1>Ingeniero de Sonido en Vivo</h1>
+      <p>Apasionado por el sonido en vivo, responsable, puntual y comprometido en cada proyecto para lograr una experiencia sonora profesional y memorable.</p>
+    </header>
+  </section>
+
+  <div class="container">
+
+    <!-- QUIÉN SOY (aquí aparece tu nombre) -->
+    <section class="section" id="intro">
+      <h2>Quién soy</h2>
+
+      <!-- foto personal (colócala en GitHub y reemplaza la URL si quieres) -->
+      <img class="profile-img" src="perfil.jpg" alt="Foto de Ángel Landeo" />
+
+      <div class="intro">
+        <p>Soy <strong>Ángel Landeo</strong>, ingeniero de sonido especializado en <strong>eventos en vivo</strong>. Me destaco por mi compromiso, puntualidad y dedicación total a ofrecer un sonido claro, potente y equilibrado. Mi pasión por el audio me impulsa a mejorar cada día y brindar resultados profesionales en cualquier escenario.</p>
+      </div>
+
+      <div class="images" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=60" alt="Consola de sonido" />
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=60" alt="Audio en vivo" />
+        <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=1200&q=60" alt="Escenario y sonido" />
+      </div>
+
+      <!-- certificados (apartado separado) -->
+      <div class="certs" id="certificados">
+        <h3 style="color:var(--lime);margin-top:0">Mis Certificados</h3>
+        <ul>
+          <li>Certificado en <strong>Sonido en Vivo</strong> — CTAudio</li>
+          <li>Certificado en <strong>Mezcla en Vivo</strong> — CTAudio</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section" id="servicios">
+      <h2>Servicios</h2>
+      <div class="services">
+        <div class="card">
+          <h3>Mezcla en Vivo</h3>
+          <p>Operación profesional de consolas digitales y analógicas para conciertos, conferencias y eventos.</p>
+        </div>
+        <div class="card">
+          <h3>Configuración de Sistemas PA</h3>
+          <p>Optimización y alineamiento de sistemas de sonido para un rendimiento ideal.</p>
+        </div>
+        <div class="card">
+          <h3>Microfoneo Profesional</h3>
+          <p>Selección y colocación precisa de micrófonos para obtener un sonido limpio y definido.</p>
+        </div>
+        <div class="card">
+          <h3>Monitores en Escenario</h3>
+          <p>Mezclas de monitores en piso e in-ear para músicos y vocalistas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Quieres trabajar conmigo para tu próximo evento? Escríbeme directamente:</p>
+      <div class="contact">
+        <a class="btn" href="https://wa.me/51903168583" target="_blank">📲 WhatsApp: 903168583</a>
+        <a class="btn" href="https://www.instagram.com/angel.land.xd/" target="_blank">📸 Instagram</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2025 Ingeniero de Sonido en Vivo — Todos los derechos reservados
+  </footer>
+</body>
+</html>
